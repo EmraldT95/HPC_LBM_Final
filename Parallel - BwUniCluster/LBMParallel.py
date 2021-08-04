@@ -402,10 +402,10 @@ try:
         f_ijk, rho_ij, u_ijk = collision(f_ijk)
 
     if rank == 0:
-        print('No. of lattice points = {}, Iterations = {}, Approx. Total execution time = {}'.format(NX * NY, 100000, (time.time() - startTime) * size))
+        print('No. of lattice points = {}, Iterations = {}, Approx. Execution time per processor = {}'.format(NX * NY, 100000, (time.time() - startTime)))
     print('Rank {}: Saving data...'.format(rank))
-    save_mpiio(cart_comm, 'ux.npy', u_ijk[0])
-    save_mpiio(cart_comm, 'uy.npy', u_ijk[1])
+    save_mpiio(cart_comm, 'ux.npy', u_ijk[0,1:-1,1:-1])
+    save_mpiio(cart_comm, 'uy.npy', u_ijk[1,1:-1,1:-1])
     print('Rank {}: Save Complete'.format(rank))
 
 except(Exception, ArithmeticError) as e:
