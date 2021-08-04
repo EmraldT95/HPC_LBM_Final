@@ -7,7 +7,7 @@ The "Milestones" folder contains `.ipynb`  that are all the experiments mentione
 
 ## Parallel
 
-To execute the code in Parallel using BwUnicluster, download the files in "Parallel - BwUniCluster". Login to BwUnicluster and run "sbatch LBMParallel.sh". The current setting is to run on 25 processors across 4 nodes, i.e, 4x25 = 100 processors, time limit of 10 minutes. The status of execution can be found using the command "squeue". The "sinfo_t_idle" command can be used to find out information about the no. of nodes with free processors.
+To execute the code in Parallel using BwUnicluster, download the files in "Parallel - BwUniCluster". Login to BwUnicluster and run `sbatch LBMParallel.sh`. The current setting is to run on 25 processors across 4 nodes, i.e, 4x25 = 100 processors, time limit of 10 minutes. The status of execution can be found using the command `squeue`. The `sinfo_t_idle` command can be used to find out information about the no. of nodes with free processors.
 
-To visualize the final output, copy the "Visualization.py" file into the same folder as the output "ux.npy" and "uy.npy" file and then run it. 
+To visualize the final output, copy the "Visualization.py" file into the same folder as the output "ux.npy" and "uy.npy" file and then run it from the terminal using `python Visualization.py`.
 
